@@ -4,6 +4,9 @@ requireEnvVars();
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  nitro: {
+    preset: "node-server",
+  },
   css: ["@/assets/main.css", "@formkit/themes/genesis"],
   autoImports: {
     dirs: ["stores"],
@@ -41,7 +44,6 @@ export default defineNuxtConfig({
     },
   },
 });
-
 function requireEnvVars() {
   const map = {
     "Deskree Project URL": process.env.NUXT_DESKREE_BASE_URL,
